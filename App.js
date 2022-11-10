@@ -102,6 +102,7 @@ function ScreenTwo({ navigation }) {
   return (
 
       <View style={styles.Screen2}>
+        <Text style={{fontSize:25,alignSelf:'center'}}>SIGN UP</Text>
 
     <View>
         <TextInput placeholder={'Password'} style={styles.emailInput} />
@@ -114,8 +115,38 @@ function ScreenTwo({ navigation }) {
         <TouchableOpacity
           style={styles.btn2}
           onPress={() => navigation.navigate('ScreenThree')}>
-          <Text style={{marginLeft:75}}>LOG IN</Text>
+          <Text style={{fontSize:20,marginLeft:65}}>LOG IN</Text>
         </TouchableOpacity>
+      </View>
+
+      <View style={styles.homeBtn}>
+     
+        <TouchableOpacity>
+        <Image
+            style={styles.loginIcon}
+            source={require('./assets/home.png')}
+          />
+        </TouchableOpacity>
+         
+         <TouchableOpacity>
+          <Image
+              style={styles.loginIcon}
+              source={require('./assets/search.png')}
+            />
+         </TouchableOpacity>
+          <TouchableOpacity>
+               <Image
+                style={styles.loginIcon}
+                source={require('./assets/plus.png')}
+              />
+          </TouchableOpacity>
+         <TouchableOpacity>
+            <Image
+            style={styles.loginIcon}
+            source={require('./assets/settings.png')}
+          />
+      
+         </TouchableOpacity>
       </View>
     </View>
   );
@@ -127,9 +158,67 @@ function ScreenThree({ navigation }) {
     <View style={styles.Screen3}>
       <Text style={{fontSize:35,color:'green'}}>Food that meets your needs</Text>
 
+      <View style={styles.Screen3A}>
+      <TextInput placeholder={'Seafood'} style={styles.emailInput}/>
+      <TextInput placeholder={'Burger'} style={styles.emailInput}/>
+      <TextInput placeholder={'Ribs'} style={styles.emailInput}/>
+      <TextInput placeholder={'Pizza'} style={styles.emailInput}/>
+      </View>
+
       <View>
+      <TextInput style={styles.input} placeholder="HOME" />
+      <TextInput style={styles.input} placeholder="MENU -" />
+      <TextInput style={styles.input} placeholder="ORDER :" />
         <TextInput placeholder={'Search for food'} style={styles.emailInput} />
       </View>
+
+      <Image
+        style={{
+          fontSize:50,
+          borderColor: "red",
+          borderWidth: 5,
+          height: 100,
+          width: 200
+        }}
+        source={require("./assets/burgerjpg.jpg")}
+      />
+      <Text>Cost Price| R120</Text>
+
+<Image
+        style={{
+          fontSize:50,
+          borderColor:"red",
+          borderWidth: 5,
+          height: 100,
+          width: 200
+        }}
+        source={require("./assets/pizza.jpg")}
+      />
+     <Text>Cost Price| R185</Text>
+
+<Image
+        style={{
+          fontSize:50,
+          borderColor: "red",
+          borderWidth: 5,
+          height: 100,
+          width: 200
+        }}
+        source={require("./assets/pasta.jpg")}
+      />
+      <Text>Cost Price| R160</Text>
+
+<Image
+        style={{
+          fontSize:50,
+          borderColor: "red",
+          borderWidth: 5,
+          height: 100,
+          width: 200
+        }}
+        source={require("./assets/ribs.jpg")}
+      />
+      <Text>Cost Price| R245</Text>
       
       <View>
         <TouchableOpacity
@@ -139,6 +228,30 @@ function ScreenThree({ navigation }) {
         </TouchableOpacity>
 
       </View>
+
+      <View style={styles.homeBtn}>
+         
+         <TouchableOpacity>
+          <Image
+              style={styles.loginIcon}
+              source={require('./assets/search.png')}
+            />
+         </TouchableOpacity>
+          <TouchableOpacity>
+               <Image
+                style={styles.loginIcon}
+                source={require('./assets/plus.png')}
+              />
+          </TouchableOpacity>
+         <TouchableOpacity>
+            <Image
+            style={styles.loginIcon}
+            source={require('./assets/settings.png')}
+          />
+         </TouchableOpacity>
+              
+      </View>
+
     </View>
   );
 }
@@ -239,14 +352,16 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: 'white',
   },
+
   Screen3: {
     height: '100%',
     width: '100%',
-    backgroundColor: 'red',
-    marginLeft:40
+    backgroundColor: '#F3CC42',
+    display:'flex',
   },
   Screen3Text: {
     color: 'white',
+
   },
   Screen4: {
     height: '100%',
