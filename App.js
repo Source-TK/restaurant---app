@@ -158,15 +158,7 @@ function ScreenThree({ navigation }) {
     <View style={styles.Screen3}>
       <Text style={{fontSize:35,color:'green'}}>Food that meets your needs</Text>
 
-      <View style={styles.Screen3A}>
-      <TextInput placeholder={'Seafood'} style={styles.emailInput}/>
-      <TextInput placeholder={'Burger'} style={styles.emailInput}/>
-      <TextInput placeholder={'Ribs'} style={styles.emailInput}/>
-      <TextInput placeholder={'Pizza'} style={styles.emailInput}/>
-      </View>
-
       <View>
-      <TextInput style={styles.input} placeholder="HOME" />
       <TextInput style={styles.input} placeholder="MENU -" />
       <TextInput style={styles.input} placeholder="ORDER :" />
         <TextInput placeholder={'Search for food'} style={styles.emailInput} />
@@ -177,8 +169,8 @@ function ScreenThree({ navigation }) {
           fontSize:50,
           borderColor: "red",
           borderWidth: 5,
-          height: 100,
-          width: 200
+          height: 80,
+          width: 120
         }}
         source={require("./assets/burgerjpg.jpg")}
       />
@@ -189,8 +181,8 @@ function ScreenThree({ navigation }) {
           fontSize:50,
           borderColor:"red",
           borderWidth: 5,
-          height: 100,
-          width: 200
+          height: 80,
+          width: 120
         }}
         source={require("./assets/pizza.jpg")}
       />
@@ -201,8 +193,8 @@ function ScreenThree({ navigation }) {
           fontSize:50,
           borderColor: "red",
           borderWidth: 5,
-          height: 100,
-          width: 200
+          height: 80,
+          width: 120
         }}
         source={require("./assets/pasta.jpg")}
       />
@@ -213,8 +205,8 @@ function ScreenThree({ navigation }) {
           fontSize:50,
           borderColor: "red",
           borderWidth: 5,
-          height: 100,
-          width: 200
+          height: 80,
+          width: 120
         }}
         source={require("./assets/ribs.jpg")}
       />
@@ -222,9 +214,9 @@ function ScreenThree({ navigation }) {
       
       <View>
         <TouchableOpacity
-          style={styles.btn2}
+          style={styles.btn3}
           onPress={() => navigation.navigate('ScreenFour')}>
-          <Text style={{marginLeft:75,fontSize:15,justifyContent:'center',marginBottom:140}}>MENU</Text>
+          <Text style={{marginLeft:75,fontSize:15,justifyContent:'center',marginBottom:140}}>ORDER</Text>
         </TouchableOpacity>
 
       </View>
@@ -259,6 +251,7 @@ function ScreenThree({ navigation }) {
 function ScreenFour() {
   return (
     <View style={styles.Screen4}>
+
       <Text>Delivery Options</Text>
 
       <Image
@@ -271,7 +264,9 @@ function ScreenFour() {
         source={require("./assets/m1.jpg")}
       />
       <Text>GPS-Location</Text>
-    
+
+      <TextInput style={styles.input} placeholder="ORDER RECEIVED" />
+      <TextInput style={styles.input} placeholder="NUMBER : 122" />
 
       <TouchableOpacity
           style={styles.btn2}
@@ -377,10 +372,20 @@ const styles = StyleSheet.create({
     margin: 15,
     marginTop:20,
     alignSelf: 'center',
-    backgroundColor: '#D9D9D9',
+    backgroundColor: '#F3CC42',
   },
   btn2: {
-    backgroundColor: 'orange',
+    backgroundColor: '#F3CC42',
+    borderRadius: 30,
+    width: 220,
+    height: 50,
+    padding: 12,
+    margin: 15,
+    alignSelf: 'center',
+  },
+  btn3:{
+    backgroundColor: 'green',
+    borderRadius: 30,
     width: 220,
     height: 50,
     padding: 12,
